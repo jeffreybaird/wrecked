@@ -1,0 +1,14 @@
+<%= form_for @wreck do |f| %>
+  <%= f.label :shipname, "Ship Name" %>
+  <%= f.text_field :shipname, class: "form-control" %>
+  <%= f.label :latitude, "Latitude" %>
+  <%= f.text_field :latitude, class: "form-control" %>
+  <%= f.label :longitude, "Longitude" %>
+  <%= f.text_field :longitude, class: "form-control" %>
+  <%= f.label :summary, "Summary of Events" %>
+  <%= f.text_area :summary, class: "form-control" %>
+  <%= f.label :link, "Further Reading" %>
+  <%= f.text_field :link, class: "form-control" %>
+  <%= f.submit "Create New Shipwreck" %>
+
+<% end %>
