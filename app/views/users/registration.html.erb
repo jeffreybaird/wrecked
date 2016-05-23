@@ -1,0 +1,9 @@
+<%= form_for @user do |f| %>
+  <%= f.label :email, "Email" %>
+  <%= f.text_field :email, class: "form-control" %>
+  <%= f.label :fullname, "Full Name" %>
+  <%= f.text_field :fullname %>
+  <%= f.label :website, "Website" %>
+  <%= f.text_field :website %>
+  <%= f.submit "Finish Registration" %>
+<% end %>
