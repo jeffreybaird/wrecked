@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  resources :shipwrecks
+
   resources :users
 
   get "users/registration/:id" => "users#registration"
   post "users/update" => "users#update"
+
+  get "/logout" => "users#destroy"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -29,6 +29,15 @@ class UsersController < ApplicationController
     @user_to_view = User.find(params[:id])
   end
 
+  def index
+    redirect_to "/users/#{session[:current_user_id]}"
+  end
+
+  def destroy
+    session.delete(:current_user_id)
+    redirect_to root_url
+  end
+
   private
 
   def user_params
