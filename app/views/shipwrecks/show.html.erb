@@ -1,14 +1,3 @@
-<p>
-  Ship Name: <%= @wreck.shipname %>
-</p>
+<%= render "shared/ship_info", locals: {wreck: @wreck} %>
 
-<p>
-  Location of Wreck: <%= @wreck.latitude %>, <%= @wreck.longitude %>
-</p>
-<p>
-  Summary of Events: <%= @wreck.summary %>
-</p>
-
-<p>
-  <%= link_to("Further Reading",@wreck.link )%>
-</p>
+<%= render "shared/footer" %>

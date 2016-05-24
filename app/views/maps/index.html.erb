@@ -1,0 +1,15 @@
+<%= content_tag :div, class: "shipwreck_data", data: {shipwreck_data: @wrecks} do %>
+<% end %>
+
+<div id="map"></div>
+
+<div class="row">
+  <div class="footer">
+    <%= render "shared/footer" %>
+  </div>
+
+  <div id="info-partial">
+    <!-- <% @wreck = @wrecks.first %> -->
+    <%= render "shared/ship_info", locals: {wreck: @wreck} %>
+  </div>
+</div>

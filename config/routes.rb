@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :maps
+
+  get "maps/refresh/:id" => "maps#refresh"
+
   get "users/registration/:id" => "users#registration"
   post "users/update" => "users#update"
 

@@ -6,13 +6,14 @@ class UsersController < ApplicationController
   def create
     puts user_params
     @user = User.find_by(email: user_params[:email]).try(:authenticate, user_params[:password])
-    unless @user
+    if @user
+      session[:current_user_id] = @user.id
+      redirect_to "/users/#{session[:current_user_id]}"
+    else
       @user = User.create(user_params)
       session[:current_user_id] = @user.id
-      redirect_to "users/registration/#{session[:current_user_id]}"
+      redirect_to "/users/registration/#{session[:current_user_id]}"
     end
-    session[:current_user_id] = @user.id
-    redirect_to "/users/#{session[:current_user_id]}"
   end
 
   def registration
