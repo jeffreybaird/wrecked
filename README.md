@@ -7,14 +7,14 @@ This is an app that allows users to plot shipwrecks on a map.
 ## Limitations
 
 ## To Do:
-* Add a migration for shipwrecks
-* Add a migration for users
-* Ship wreck edit page
-* Ship Wreck list page
-* Info page for a shipwreck
-* Info page for a user
-* Ships on a map
-* When you click on a ship data point, data about the ship shows on the page.
+* ~~Add a migration for shipwrecks~~
+* ~~Add a migration for users~~
+* ~~Ship wreck edit page~~
+* ~~Ship Wreck list page~~
+* ~~Info page for a shipwreck~~
+* ~~Info page for a user~~
+* ~~Ships on a map~~
+* ~~When you click on a ship data point, data about the ship shows on the page.~~
 * Validate Lat and Long
 * Shipwrecks behave like a wiki entry. Any user can edit any shipwreck.
 * Prevent duplicate ships from being entered.
