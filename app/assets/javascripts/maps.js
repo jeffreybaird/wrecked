@@ -5,11 +5,9 @@ var map;
 
 window.onload = function(){
   wrecks = $('.shipwreck_data').data('shipwreckData');
-
   for (var i = 0; i < wrecks.length; i++) {
     createMarker(parseFloat(wrecks[i].latitude), parseFloat(wrecks[i].longitude), wrecks[i].shipname, wrecks[i].id);
   }
-
 };
 
 function initMap() {
@@ -18,14 +16,6 @@ function initMap() {
     zoom: 2
   });
 }
-
-// $.ajax({
-//   url: '/maps/refresh.js',
-//   type: 'GET',
-//   dataType: 'script'
-// });
-
-
 
 function createMarker(lat, long, shipname, id){
   tempmarker = new google.maps.Marker({
